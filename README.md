@@ -1,0 +1,1 @@
+# hayday-profitability-helper
