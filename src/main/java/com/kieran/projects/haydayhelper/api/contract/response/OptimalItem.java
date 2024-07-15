@@ -1,6 +1,5 @@
-package com.kieran.projects.haydayhelper.api.contract;
+package com.kieran.projects.haydayhelper.api.contract.response;
 
-import com.kieran.projects.haydayhelper.api.entity.Item;
 import com.kieran.projects.haydayhelper.api.entity.Source;
 import lombok.*;
 
@@ -10,5 +9,5 @@ import lombok.*;
 @Builder
 public class OptimalItem {
     private Source itemSource;
-    private Item item;
+    private String itemName;
 }

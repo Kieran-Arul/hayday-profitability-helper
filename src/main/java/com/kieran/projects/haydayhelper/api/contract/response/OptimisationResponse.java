@@ -1,4 +1,4 @@
-package com.kieran.projects.haydayhelper.api.contract;
+package com.kieran.projects.haydayhelper.api.contract.response;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;

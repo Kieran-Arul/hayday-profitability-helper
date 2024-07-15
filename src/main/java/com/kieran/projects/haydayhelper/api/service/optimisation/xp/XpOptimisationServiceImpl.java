@@ -1,7 +1,7 @@
-package com.kieran.projects.haydayhelper.api.service;
+package com.kieran.projects.haydayhelper.api.service.optimisation.xp;
 
-import com.kieran.projects.haydayhelper.api.contract.OptimisationRequest;
-import com.kieran.projects.haydayhelper.api.contract.OptimisationResponse;
+import com.kieran.projects.haydayhelper.api.contract.request.OptimisationRequest;
+import com.kieran.projects.haydayhelper.api.contract.response.OptimisationResponse;
 import com.kieran.projects.haydayhelper.api.repository.ItemRepository;
 import com.kieran.projects.haydayhelper.api.repository.ItemSourceRepository;
 import lombok.RequiredArgsConstructor;

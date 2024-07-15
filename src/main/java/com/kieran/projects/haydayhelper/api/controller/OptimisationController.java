@@ -1,9 +1,9 @@
 package com.kieran.projects.haydayhelper.api.controller;
 
-import com.kieran.projects.haydayhelper.api.contract.OptimisationRequest;
-import com.kieran.projects.haydayhelper.api.contract.OptimisationResponse;
-import com.kieran.projects.haydayhelper.api.service.ProfitabilityOptimisationService;
-import com.kieran.projects.haydayhelper.api.service.XpOptimisationService;
+import com.kieran.projects.haydayhelper.api.contract.request.OptimisationRequest;
+import com.kieran.projects.haydayhelper.api.contract.response.OptimisationResponse;
+import com.kieran.projects.haydayhelper.api.service.optimisation.profit.ProfitabilityOptimisationService;
+import com.kieran.projects.haydayhelper.api.service.optimisation.xp.XpOptimisationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

@@ -1,5 +1,6 @@
-package com.kieran.projects.haydayhelper.api.contract;
+package com.kieran.projects.haydayhelper.api.contract.response;
 
+import com.kieran.projects.haydayhelper.api.contract.request.AbstractRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
