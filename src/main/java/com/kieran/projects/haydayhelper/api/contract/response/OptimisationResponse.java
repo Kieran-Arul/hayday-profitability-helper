@@ -1,15 +1,16 @@
 package com.kieran.projects.haydayhelper.api.contract.response;
 
+import com.kieran.projects.haydayhelper.api.contract.request.OptimisationRequest;
 import lombok.*;
-import lombok.experimental.SuperBuilder;
 
 import java.util.Set;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
-public class OptimisationResponse extends AbstractResponse {
+@Builder
+public class OptimisationResponse {
+    private OptimisationRequest request;
     private Set<OptimalItem> items;
 }

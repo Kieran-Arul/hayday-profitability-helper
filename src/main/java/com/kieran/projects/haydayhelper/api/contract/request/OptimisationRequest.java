@@ -1,16 +1,19 @@
 package com.kieran.projects.haydayhelper.api.contract.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
-public class OptimisationRequest extends AbstractRequest {
+@Builder
+public class OptimisationRequest {
+
+    @NotNull
+    private Integer level;
+
+    private Integer minProductionTime;
+    private Integer maxProductionTime;
 
 }

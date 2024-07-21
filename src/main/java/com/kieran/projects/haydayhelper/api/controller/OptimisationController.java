@@ -4,6 +4,7 @@ import com.kieran.projects.haydayhelper.api.contract.request.OptimisationRequest
 import com.kieran.projects.haydayhelper.api.contract.response.OptimisationResponse;
 import com.kieran.projects.haydayhelper.api.service.optimisation.profit.ProfitabilityOptimisationService;
 import com.kieran.projects.haydayhelper.api.service.optimisation.xp.XpOptimisationService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -18,17 +19,21 @@ public class OptimisationController {
     private final ProfitabilityOptimisationService profitabilityOptimisationService;
     private final XpOptimisationService xpOptimisationService;
 
-    // TODO add validation of request body using @Valid
+    // TODO: go through data flow, find areas of possible failure,
+    //  For areas of possible failure, throw custom exceptions defined in the exception package
+    //  Handle such exceptions in the advice package
+    //  Implement Response and ResponseHandler classes
+    //  Use those classes to make the code more readable and generic
 
-    @PostMapping(value = "/profit", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/profit", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity<OptimisationResponse> getProfitableItems(@RequestBody OptimisationRequest request) {
+    public ResponseEntity<OptimisationResponse> getProfitableItems(@Valid @ModelAttribute OptimisationRequest request) {
         return ResponseEntity.ok(profitabilityOptimisationService.getProfitMaximisingResponse(request));
     }
 
-    @PostMapping(value = "/xp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/xp", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity<OptimisationResponse> getOptimalXpItems(@RequestBody OptimisationRequest request) {
+    public ResponseEntity<OptimisationResponse> getOptimalXpItems(@Valid @ModelAttribute OptimisationRequest request) {
         return ResponseEntity.ok(xpOptimisationService.getXpMaximisingResponse(request));
     }
 

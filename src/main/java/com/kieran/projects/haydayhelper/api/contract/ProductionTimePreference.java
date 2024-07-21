@@ -1,6 +1,6 @@
-package com.kieran.projects.haydayhelper.api.service;
+package com.kieran.projects.haydayhelper.api.contract;
 
-public enum RequestPreference {
+public enum ProductionTimePreference {
 
     NO_PRODUCTION_TIME,
     MIN_PRODUCTION_TIME,

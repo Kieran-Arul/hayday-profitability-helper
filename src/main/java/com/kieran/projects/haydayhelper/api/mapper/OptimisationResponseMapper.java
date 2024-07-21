@@ -29,17 +29,19 @@ public class OptimisationResponseMapper {
         Set<OptimalItem> optimalItems = new HashSet<>();
 
         for (Item item : items) {
-
-            optimalItems.add(
-                    OptimalItem.builder()
-                            .itemName(item.getName())
-                            .itemSource(item.getSource().getSource())
-                            .build()
-            );
-
+            optimalItems.add(mapItemToOptimalItem(item));
         }
 
         return optimalItems;
+
+    }
+
+    private OptimalItem mapItemToOptimalItem(Item item) {
+
+        return OptimalItem.builder()
+                .itemName(item.getName())
+                .itemSource(item.getSource().getSource())
+                .build();
 
     }
 
